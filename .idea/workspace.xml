@@ -24,13 +24,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\app" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0" />
     </key>
   </component>
@@ -81,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642480253031</updated>
-      <workItem from="1642480254867" duration="2094000" />
+      <workItem from="1642480254867" duration="5576000" />
     </task>
     <servers />
   </component>
