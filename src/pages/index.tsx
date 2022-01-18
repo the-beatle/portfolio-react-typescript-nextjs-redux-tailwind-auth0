@@ -18,6 +18,9 @@ const IndexPage: NextPage = () => {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <span>
+          <span className={"text-red-600 bg-blue-300 rounded"}>
+            if this text is red is because tailwind is working!
+          </span>
           <span>Learn </span>
           <a
             className={styles.link}
