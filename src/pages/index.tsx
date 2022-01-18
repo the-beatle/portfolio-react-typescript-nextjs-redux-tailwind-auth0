@@ -1,3 +1,4 @@
+import { useUser } from '@auth0/nextjs-auth0'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -5,6 +6,8 @@ import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
 
 const IndexPage: NextPage = () => {
+  const { user, error, isLoading } = useUser();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,6 +17,7 @@ const IndexPage: NextPage = () => {
       <header className={styles.header}>
         <img src="/logo.svg" className={styles.logo} alt="logo" />
         <Counter />
+        {user&&<div>{user.name}</div>}
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

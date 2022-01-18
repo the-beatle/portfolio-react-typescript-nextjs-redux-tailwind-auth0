@@ -16,6 +16,7 @@
     "tailwindcss": "^2.2.2"
   },
   "devDependencies": {
+    "@auth0/nextjs-auth0": "^1.6.2",
     "@testing-library/jest-dom": "^5.0.0",
     "@testing-library/react": "^12.1.0",
     "@testing-library/user-event": "^13.0.0",
