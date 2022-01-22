@@ -2,6 +2,7 @@ import React, {Fragment, useState} from "react"
 import {useUser} from '@auth0/nextjs-auth0'
 import type {GetStaticProps, NextPage} from 'next'
 import Head from 'next/head'
+import Router from 'next/router'
 
 
 import Counter from '../features/counter/Counter'
@@ -33,6 +34,14 @@ function Page({data}: Data) {
             </Head>
             <header className={styles.header}>
                 {user && <div>{user.name}</div>}
+                {user ?
+                    <button onClick={() => Router.push("/api/auth/logout")} className={"bg-red-200 p-1  rounded"}>
+                        Logout
+                    </button> :
+                    <button onClick={() => Router.push("/api/auth/login")} className={"bg-blue-200 p-1 rounded"}>
+                        Login
+                    </button>
+                }
                 <h1 className={"p-4 bg-gray-200 mt-10"}>Tree</h1>
                 <div>
                     <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
@@ -53,6 +62,7 @@ const TreeItem = ({
                   }: TreeItemProps) => {
     const [isOpen, toggleItemOpen] = useState<boolean | null>(true)
     const [selected, setSelected] = useState(isSelected)
+
 
     return (
         <div>
@@ -79,6 +89,7 @@ const TreeItem = ({
                 >
                     {name}
                 </div>
+
             </div>
             <div className={"pl-10"}>{isOpen && children}</div>
         </div>
@@ -107,7 +118,6 @@ interface RecursiveTreeProps {
     readonly listMeta: Tree
     readonly onSelectCallback: (value: TreeBranch) => void
 }
-
 
 const RecursiveTree = ({listMeta, onSelectCallback}: RecursiveTreeProps) => {
     const createTree = (branch: TreeBranch) =>
