@@ -47,7 +47,7 @@ function Page({data}: Data) {
                         <h3 className="text-2xl font-custom2 text-green-100">
                             I make full stack web integrations with next generation technologies!
                         </h3>
-                        <div className={"my-2 bg-gray-800"}>
+                        <div className={"my-2 bg-gray-800 w-full"}>
                             <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
                         </div>
                     </div>
