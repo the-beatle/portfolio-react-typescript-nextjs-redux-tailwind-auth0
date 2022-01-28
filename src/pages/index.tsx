@@ -33,7 +33,7 @@ function Page({data}: Data) {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <header className={styles.header}>
-                <div className={"bg-gray-800 w-full"}>
+                <div className={"bg-gray-800 w-full h-full"}>
                     <div className="flex flex-col items-center h-screen gap-3 mx-5 mt-10">
                         <h3 className="text-5xl font-custom1 text-red-600">
                             Hello world,
@@ -47,11 +47,11 @@ function Page({data}: Data) {
                         <h3 className="text-2xl font-custom2 text-green-100">
                             I make full stack web integrations with next generation technologies!
                         </h3>
+                        <div className={"my-2 "}>
+                            <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div className={"my-2"}>
-                        <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
-                    </div>
                 </div>
             </header>
         </div>
