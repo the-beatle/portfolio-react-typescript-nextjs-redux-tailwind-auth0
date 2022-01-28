@@ -62,7 +62,7 @@ const TreeItem = ({
                       isSelected,
                       children,
                   }: TreeItemProps) => {
-    const [isOpen, toggleItemOpen] = useState<boolean | null>(true)
+    const [isOpen, toggleItemOpen] = useState<boolean | null>(null)
     const [selected, setSelected] = useState(isSelected)
 
 
