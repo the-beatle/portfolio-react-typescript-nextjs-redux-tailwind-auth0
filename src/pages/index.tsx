@@ -33,20 +33,36 @@ function Page({data}: Data) {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <header className={styles.header}>
-                {user && <div>{user.name}</div>}
-                {user ?
-                    <button onClick={() => Router.push("/api/auth/logout")} className={"bg-red-200 p-1  rounded"}>
-                        Logout
-                    </button> :
-                    <button onClick={() => Router.push("/api/auth/login")} className={"bg-blue-200 p-1 rounded"}>
-                        Login
-                    </button>
-                }
-                <h1 className={"p-4 bg-gray-200 mt-10"}>Tree</h1>
-                <div>
-                    <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
+
+                <div className={"bg-gray-800 w-full"}>
+                    <div className="flex flex-col items-center justify-center h-screen gap-3">
+                        <h3 className="text-5xl font-custom1 text-red-600">
+                            Hello world,
+                        </h3>
+                        <h3 className="text-5xl font-custom1 text-green-600">
+                            My Name is Mario
+                        </h3>
+                        <h3 className="text-3xl font-custom1 text-yellow-300">
+                            I'm a Senior Web developer!
+                        </h3>
+                        <h3 className="text-2xl font-custom2 text-green-100">
+                            I make full stack web integrations with next generation technologies!
+                        </h3>
+                        <div className={"my-2"}>
+                            <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
+                        </div>
+                    </div>
+
+                    {user && <div>{user.name}</div>}
+                    {user ?
+                        <button onClick={() => Router.push("/api/auth/logout")} className={"bg-red-200 p-1  rounded"}>
+                            Logout
+                        </button> :
+                        <button onClick={() => Router.push("/api/auth/login")} className={"bg-blue-200 p-1 rounded"}>
+                            Login
+                        </button>
+                    }
                 </div>
-                <span/>
             </header>
         </div>
     )
@@ -72,7 +88,7 @@ const TreeItem = ({
                         className="icon-container"
                         onClick={() => toggleItemOpen(!isOpen)}
                     >
-                        {isOpen ? <div className={"mx-2 text-blue-400"}>close</div> :
+                        {isOpen ? <div className={"mx-2 text-red-400"}>close</div> :
                             <div className={"mx-2 text-green-400"}>open</div>}
                     </div>
                 )}
@@ -138,7 +154,7 @@ const RecursiveTree = ({listMeta, onSelectCallback}: RecursiveTreeProps) => {
         )
 
     return (
-        <div>
+        <div className={"text-white"}>
             {listMeta.map((branch: TreeBranch, i: any) => (
                 <div key={i}>{createTree(branch)}</div>
             ))}
