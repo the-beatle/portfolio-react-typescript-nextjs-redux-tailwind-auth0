@@ -18,3 +18,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Custom-1";
+  src: url("/font/JetBrainsMono-Bold.ttf");
+}
+
+
+@font-face {
+  font-family: "Custom-2";
+  src: url("/font/JetBrainsMono-Light.ttf");
+}
