@@ -26,7 +26,7 @@ function Page({data}: Data) {
     const {user, error, isLoading} = useUser();
 
     return (
-        <div className={"bg-gray-800"}>
+        <div className={""}>
             <Head>
                 <title>Mario - Portfolio</title>
                 <link rel="icon" href="/favicon.ico"/>
