@@ -33,9 +33,8 @@ function Page({data}: Data) {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <header className={styles.header}>
-
                 <div className={"bg-gray-800 w-full"}>
-                    <div className="flex flex-col items-center justify-center h-screen gap-3">
+                    <div className="flex flex-col items-center h-screen gap-3 mx-5 mt-10">
                         <h3 className="text-5xl font-custom1 text-red-600">
                             Hello world,
                         </h3>
@@ -52,16 +51,6 @@ function Page({data}: Data) {
                             <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
                         </div>
                     </div>
-
-                    {user && <div>{user.name}</div>}
-                    {user ?
-                        <button onClick={() => Router.push("/api/auth/logout")} className={"bg-red-200 p-1  rounded"}>
-                            Logout
-                        </button> :
-                        <button onClick={() => Router.push("/api/auth/login")} className={"bg-blue-200 p-1 rounded"}>
-                            Login
-                        </button>
-                    }
                 </div>
             </header>
         </div>
