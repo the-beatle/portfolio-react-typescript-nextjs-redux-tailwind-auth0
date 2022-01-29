@@ -30,7 +30,7 @@ function TreeChart({ data }) {
 
         // transform hierarchical data
         const root = hierarchy(data);
-        const treeLayout = tree().size([600, width]);
+        const treeLayout = tree().size([height, width]);
 
         const linkGenerator:any = linkHorizontal()
             .x((link:any) => link.y)
@@ -92,7 +92,6 @@ function TreeChart({ data }) {
             .attr("x", (node:any) => node.y)
             .attr("y", (node:any) => node.x - 12)
             .attr("text-anchor", "middle")
-
             .attr("font-size", 14)
             .attr("fill", "white")
             .text(node => node.data.name)
@@ -103,7 +102,7 @@ function TreeChart({ data }) {
     }, [data, dimensions, previouslyRenderedData]);
 
     return (
-        <div ref={wrapperRef} style={{ marginBottom: "2rem"}}>
+        <div ref={wrapperRef} style={{ marginBottom: "2rem",height:"500px"}} >
             <svg ref={svgRef}></svg>
         </div>
 );
