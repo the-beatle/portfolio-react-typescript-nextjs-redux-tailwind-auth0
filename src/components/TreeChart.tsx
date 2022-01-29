@@ -78,7 +78,7 @@ function TreeChart({ data }) {
                     return this.getTotalLength();
                 })
                 .transition()
-                .duration(5000)
+                .duration(2000)
                 .delay(link => link.source.depth * 500)
                 .attr("stroke-dashoffset", 0);
         }
