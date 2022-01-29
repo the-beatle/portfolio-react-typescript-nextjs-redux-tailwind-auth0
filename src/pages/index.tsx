@@ -7,6 +7,7 @@ import Router from 'next/router'
 
 import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
+import TreeChart from "../components/TreeChart"
 
 interface Data {
     data: any;
@@ -24,6 +25,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 function Page({data}: Data) {
     const {user, error, isLoading} = useUser();
+    console.log(data)
 
     return (
         <div className={""}>
@@ -45,8 +47,8 @@ function Page({data}: Data) {
                     <h3 className="text-2xl font-custom2 text-green-100 mt-5">
                         I make full stack web integrations with next generation technologies!
                     </h3>
-                    <div className={"my-2 text-2xl text-green-100 items-center"}>
-                        <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
+                    <div className={"w-screen px-20 font-custom1"} >
+                        <TreeChart data={{name:"Mario",children:data}}/>
                     </div>
                 </div>
             </header>
