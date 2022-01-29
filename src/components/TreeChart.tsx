@@ -101,7 +101,7 @@ function TreeChart({ data }) {
     }, [data, dimensions, previouslyRenderedData]);
 
     return (
-        <div ref={wrapperRef} style={{ marginBottom: "2rem",height:"300px"}} >
+        <div ref={wrapperRef} style={{ marginBottom: "2rem",height:"500px"}} >
             <svg ref={svgRef}></svg>
         </div>
 );
