@@ -4,6 +4,7 @@
     <list default="true" id="d53ef7d1-9850-463d-934d-9f91d600b7d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TreeChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TreeChart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +109,7 @@
       <workItem from="1643229540628" duration="5000" />
       <workItem from="1643247079259" duration="1584000" />
       <workItem from="1643315726121" duration="10352000" />
-      <workItem from="1643405372953" duration="14755000" />
+      <workItem from="1643405372953" duration="15987000" />
     </task>
     <servers />
   </component>

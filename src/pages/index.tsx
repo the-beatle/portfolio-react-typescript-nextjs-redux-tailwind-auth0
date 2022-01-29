@@ -47,10 +47,10 @@ function Page({data}: Data) {
                     <h3 className="text-2xl font-custom2 text-green-100 mt-5">
                         I make full stack web integrations with next generation technologies!
                     </h3>
-                    <div className={"w-screen font-custom1 px-10 sm:px-20 mt-10"}>
+                    <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
                         <TreeChart data={{name: "Mario", children: data}}/>
                     </div>
-                    <div className={"w-screen font-custom1 px-10 sm:px-20 mt-10"}>
+                    <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
                         {data.map((item: any) => <TreeChart data={item}/>)}
                     </div>
                 </div>
