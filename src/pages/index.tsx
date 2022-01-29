@@ -42,7 +42,7 @@ function Page({data}: Data) {
                         I'm Mario
                     </h3>
                     <h3 className="text-2xl font-custom1 text-yellow-300">
-                        I'm a data Scientist and Senior Web developer!
+                        Data Scientist and Senior Web developer!
                     </h3>
                     <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
                         <TreeChart data={{name: "Me", children: data}}/>
