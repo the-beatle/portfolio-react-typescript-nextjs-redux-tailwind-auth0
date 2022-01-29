@@ -30,7 +30,7 @@ function TreeChart({ data }) {
 
         // transform hierarchical data
         const root = hierarchy(data);
-        const treeLayout = tree().size([height, width]);
+        const treeLayout = tree().size([600, width]);
 
         const linkGenerator:any = linkHorizontal()
             .x((link:any) => link.y)
