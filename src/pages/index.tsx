@@ -47,8 +47,11 @@ function Page({data}: Data) {
                     <h3 className="text-2xl font-custom2 text-green-100 mt-5">
                         I make full stack web integrations with next generation technologies!
                     </h3>
-                    <div className={"w-screen px-10 font-custom1 mt-10"} >
-                        <TreeChart data={{name:"Mario",children:data}}/>
+                    <div className={"w-screen font-custom1 px-10 sm:px-20 mt-10"}>
+                        <TreeChart data={{name: "Mario", children: data}}/>
+                    </div>
+                    <div className={"w-screen font-custom1 px-10 sm:px-20 mt-10"}>
+                        {data.map((item: any) => <TreeChart data={item}/>)}
                     </div>
                 </div>
             </header>
@@ -57,48 +60,6 @@ function Page({data}: Data) {
 }
 
 export default Page;
-
-const TreeItem = ({
-                      onSelectCallback,
-                      name,
-                      isSelected,
-                      children,
-                  }: TreeItemProps) => {
-    const [isOpen, toggleItemOpen] = useState<boolean | null>(null)
-    const [selected, setSelected] = useState(isSelected)
-
-
-    return (
-        <div>
-            <div className={"flex"}>
-                {children.length > 0 && (
-                    <div
-                        className="icon-container"
-                        onClick={() => toggleItemOpen(!isOpen)}
-                    >
-                        {isOpen ? <div className={"mx-2 text-red-400"}>close</div> :
-                            <div className={"mx-2 text-green-400"}>open</div>}
-                    </div>
-                )}
-                <div
-                    className="name"
-                    onClick={(e: React.MouseEvent<HTMLInputElement>) => {
-                        setSelected(!selected)
-                        onSelectCallback(e)
-                    }}
-                    style={{
-                        marginLeft: `${children.length === 0 ? "24px" : ""}`,
-                        background: `${selected ? "#d5d5d5" : ""}`,
-                    }}
-                >
-                    {name}
-                </div>
-
-            </div>
-            <div className={"pl-10"}>{isOpen && children}</div>
-        </div>
-    )
-}
 
 interface TreeBranch {
     readonly id: string
@@ -121,31 +82,4 @@ interface TreeItemProps {
 interface RecursiveTreeProps {
     readonly listMeta: Tree
     readonly onSelectCallback: (value: TreeBranch) => void
-}
-
-const RecursiveTree = ({listMeta, onSelectCallback}: RecursiveTreeProps) => {
-    const createTree = (branch: TreeBranch) =>
-        branch.children && (
-            <TreeItem
-                id={branch.id}
-                key={branch.id}
-                onSelectCallback={(e: React.MouseEvent<HTMLElement>) => {
-                    onSelectCallback(branch)
-                }}
-                isSelected={branch.selected}
-                name={branch.name}
-            >
-                {branch.children.map((branch: TreeBranch) => {
-                    return <Fragment key={branch.id}>{createTree(branch)}</Fragment>
-                })}
-            </TreeItem>
-        )
-
-    return (
-        <div className={"text-gray-50"}>
-            {listMeta.map((branch: TreeBranch, i: any) => (
-                <div key={i}>{createTree(branch)}</div>
-            ))}
-        </div>
-    )
 }
