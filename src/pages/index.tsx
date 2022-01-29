@@ -48,10 +48,7 @@ function Page({data}: Data) {
                         I make full stack web integrations with next generation technologies!
                     </h3>
                     <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
-                        <TreeChart data={{name: "Mario", children: data}}/>
-                    </div>
-                    <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
-                        {data.map((item: any) => <TreeChart data={item}/>)}
+                        <TreeChart data={{name: "Me", children: data}}/>
                     </div>
                 </div>
             </header>
