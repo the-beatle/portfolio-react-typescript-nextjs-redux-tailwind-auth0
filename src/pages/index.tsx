@@ -47,7 +47,7 @@ function Page({data}: Data) {
                     <h3 className="text-2xl font-custom2 text-green-100 mt-5">
                         I make full stack web integrations with next generation technologies!
                     </h3>
-                    <div className={"w-screen px-20 font-custom1"} >
+                    <div className={"w-screen px-10 font-custom1 mt-10"} >
                         <TreeChart data={{name:"Mario",children:data}}/>
                     </div>
                 </div>
