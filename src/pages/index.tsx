@@ -6,8 +6,9 @@ import Router from 'next/router'
 
 import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
-import TreeChart from "../components/TreeChart"
 import Header from "../components/Header"
+import TreeChart from "../components/TreeChart"
+
 
 interface Data {
     data: TreeBranch;

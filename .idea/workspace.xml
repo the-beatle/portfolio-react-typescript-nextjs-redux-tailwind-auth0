@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d53ef7d1-9850-463d-934d-9f91d600b7d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
@@ -55,7 +54,7 @@
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -88,8 +87,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -113,7 +112,7 @@
       <workItem from="1643405372953" duration="22165000" />
       <workItem from="1643434799539" duration="264000" />
       <workItem from="1643511879709" duration="1188000" />
-      <workItem from="1643661145279" duration="4264000" />
+      <workItem from="1643661145279" duration="4944000" />
     </task>
     <servers />
   </component>
