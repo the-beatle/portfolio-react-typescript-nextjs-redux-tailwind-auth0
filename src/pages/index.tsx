@@ -4,12 +4,34 @@ import type {GetStaticProps, NextPage} from 'next'
 import Head from 'next/head'
 import Router from 'next/router'
 
-
 import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
+import TreeChart from "../components/TreeChart"
+import Header from "../components/Header"
 
 interface Data {
-    data: any;
+    data: TreeBranch;
+
+}
+
+interface TreeBranch {
+    readonly id: string
+    readonly name: string
+    children?: Tree
+    readonly selected?: boolean
+}
+
+type Tree = ReadonlyArray<TreeBranch>
+
+interface TreeItemProps {
+    readonly id: string
+    readonly name: string
+    readonly children: ReadonlyArray<JSX.Element>
+}
+
+interface RecursiveTreeProps {
+    readonly listMeta: Tree
+    readonly onSelectCallback: (value: TreeBranch) => void
 }
 
 
@@ -18,7 +40,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const data = await res.json()
     // Pass data to the page via props
     return {props: {data}}
-    // ...
 }
 
 
@@ -31,119 +52,16 @@ function Page({data}: Data) {
                 <title>Mario - Portfolio</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <header>
-                <div className="flex flex-col items-center gap-3 mx-5 py-10">
-                    <h3 className="text-5xl font-custom1 text-red-600">
-                        Hello world,
-                    </h3>
-                    <h3 className="text-5xl font-custom1 text-green-600">
-                        My Name is Mario
-                    </h3>
-                    <h3 className="text-4xl font-custom1 text-yellow-300">
-                        I'm a Senior Web developer!
-                    </h3>
-                    <h3 className="text-2xl font-custom2 text-green-100 mt-5">
-                        I make full stack web integrations with next generation technologies!
-                    </h3>
-                    <div className={"my-2 text-2xl text-green-100 items-center"}>
-                        <RecursiveTree listMeta={data} onSelectCallback={() => null}/>
-                    </div>
+            <body>
+            <div className="flex flex-col items-center gap-3 mx-5 py-10">
+                <Header/>
+                <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
+                    <TreeChart data={{name: "Me", children: data}}/>
                 </div>
-            </header>
+            </div>
+            </body>
         </div>
     )
 }
 
 export default Page;
-
-const TreeItem = ({
-                      onSelectCallback,
-                      name,
-                      isSelected,
-                      children,
-                  }: TreeItemProps) => {
-    const [isOpen, toggleItemOpen] = useState<boolean | null>(null)
-    const [selected, setSelected] = useState(isSelected)
-
-
-    return (
-        <div>
-            <div className={"flex"}>
-                {children.length > 0 && (
-                    <div
-                        className="icon-container"
-                        onClick={() => toggleItemOpen(!isOpen)}
-                    >
-                        {isOpen ? <div className={"mx-2 text-red-400"}>close</div> :
-                            <div className={"mx-2 text-green-400"}>open</div>}
-                    </div>
-                )}
-                <div
-                    className="name"
-                    onClick={(e: React.MouseEvent<HTMLInputElement>) => {
-                        setSelected(!selected)
-                        onSelectCallback(e)
-                    }}
-                    style={{
-                        marginLeft: `${children.length === 0 ? "24px" : ""}`,
-                        background: `${selected ? "#d5d5d5" : ""}`,
-                    }}
-                >
-                    {name}
-                </div>
-
-            </div>
-            <div className={"pl-10"}>{isOpen && children}</div>
-        </div>
-    )
-}
-
-interface TreeBranch {
-    readonly id: string
-    readonly name: string
-    children?: Tree
-    readonly selected?: boolean
-}
-
-type Tree = ReadonlyArray<TreeBranch>
-
-
-interface TreeItemProps {
-    readonly id: string
-    readonly onSelectCallback: (e: React.MouseEvent<HTMLInputElement>) => void
-    readonly name: string
-    readonly isSelected: boolean | undefined
-    readonly children: ReadonlyArray<JSX.Element>
-}
-
-interface RecursiveTreeProps {
-    readonly listMeta: Tree
-    readonly onSelectCallback: (value: TreeBranch) => void
-}
-
-const RecursiveTree = ({listMeta, onSelectCallback}: RecursiveTreeProps) => {
-    const createTree = (branch: TreeBranch) =>
-        branch.children && (
-            <TreeItem
-                id={branch.id}
-                key={branch.id}
-                onSelectCallback={(e: React.MouseEvent<HTMLElement>) => {
-                    onSelectCallback(branch)
-                }}
-                isSelected={branch.selected}
-                name={branch.name}
-            >
-                {branch.children.map((branch: TreeBranch) => {
-                    return <Fragment key={branch.id}>{createTree(branch)}</Fragment>
-                })}
-            </TreeItem>
-        )
-
-    return (
-        <div className={"text-gray-50"}>
-            {listMeta.map((branch: TreeBranch, i: any) => (
-                <div key={i}>{createTree(branch)}</div>
-            ))}
-        </div>
-    )
-}
