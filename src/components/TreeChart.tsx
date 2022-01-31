@@ -54,7 +54,7 @@ function TreeChart({ data }) {
             .attr("fill", "orange")
             .transition()
             .duration(500)
-            .delay(node => node.depth * 300)
+            .delay(node => node.depth * 50)
             .attr("opacity", 1);
 
         // links
@@ -68,7 +68,7 @@ function TreeChart({ data }) {
                 const length = this.getTotalLength();
                 return `${length} ${length}`;
             })
-            .attr("stroke", "white")
+            .attr("stroke", "#bcd2fa")
             .attr("fill", "none")
             .attr("opacity", 0.5);
 
@@ -78,7 +78,7 @@ function TreeChart({ data }) {
                     return this.getTotalLength();
                 })
                 .transition()
-                .duration(5000)
+                .duration(2000)
                 .delay(link => link.source.depth * 500)
                 .attr("stroke-dashoffset", 0);
         }
@@ -90,18 +90,18 @@ function TreeChart({ data }) {
             .join(enter => enter.append("text").attr("opacity", 0))
             .attr("class", "label")
             .attr("x", (node:any) => node.y-20)
-            .attr("y", (node:any) => node.x - 12)
+            .attr("y", (node:any) => node.x - 8)
             .attr("text-anchor", "middle")
             .attr("fill", "white")
             .text(node => node.data.name)
             .transition()
             .duration(500)
-            .delay(node => node.depth * 300)
+            .delay(node => node.depth * 50)
             .attr("opacity", 1);
     }, [data, dimensions, previouslyRenderedData]);
 
     return (
-        <div ref={wrapperRef} style={{ marginBottom: "2rem",height:"500px"}} >
+        <div ref={wrapperRef} style={{ marginBottom: "2rem",height:"600px"}} >
             <svg ref={svgRef}></svg>
         </div>
 );
