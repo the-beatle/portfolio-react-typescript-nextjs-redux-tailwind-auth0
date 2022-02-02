@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import { select, hierarchy, tree, linkHorizontal } from "d3";
+import React, {useRef, useEffect} from "react";
+import {select, hierarchy, tree, linkHorizontal} from "d3";
 import useResizeObserver from "../hooks/useResizeObserver";
 
 function usePrevious(value) {
@@ -10,7 +10,7 @@ function usePrevious(value) {
     return ref.current;
 }
 
-function TreeChart({ data }) {
+function TreeChart({data}) {
     const svgRef = useRef<any>(null);
     const wrapperRef = useRef<any>(null);
     const dimensions = useResizeObserver(wrapperRef);
@@ -25,22 +25,19 @@ function TreeChart({ data }) {
         // use dimensions from useResizeObserver,
         // but use getBoundingClientRect on initial render
         // (dimensions are null for the first render)
-        const { width, height } =
+        const {width, height} =
         dimensions || wrapperRef.current.getBoundingClientRect();
 
         // transform hierarchical data
         const root = hierarchy(data);
         const treeLayout = tree().size([height, width]);
 
-        const linkGenerator:any = linkHorizontal()
-            .x((link:any) => link.y)
-            .y((link:any) => link.x);
+        const linkGenerator: any = linkHorizontal()
+            .x((link: any) => link.y)
+            .y((link: any) => link.x);
 
         // enrich hierarchical data with coordinates
         treeLayout(root);
-
-        console.warn("descendants", root.descendants());
-        console.warn("links", root.links());
 
         // nodes
         svg
@@ -48,8 +45,8 @@ function TreeChart({ data }) {
             .data(root.descendants())
             .join(enter => enter.append("circle").attr("opacity", 0))
             .attr("class", "node")
-            .attr("cx", (node:any) => node.y)
-            .attr("cy", (node:any) => node.x)
+            .attr("cx", (node: any) => node.y)
+            .attr("cy", (node: any) => node.x)
             .attr("r", 3)
             .attr("fill", "orange")
             .transition()
@@ -64,7 +61,7 @@ function TreeChart({ data }) {
             .join("path")
             .attr("class", "link")
             .attr("d", linkGenerator)
-            .attr("stroke-dasharray", function(this:any) {
+            .attr("stroke-dasharray", function (this: SVGCircleElement) {
                 const length = this.getTotalLength();
                 return `${length} ${length}`;
             })
@@ -74,7 +71,7 @@ function TreeChart({ data }) {
 
         if (data !== previouslyRenderedData) {
             enteringAndUpdatingLinks
-                .attr("stroke-dashoffset", function(this:any) {
+                .attr("stroke-dashoffset", function (this: SVGGeometryElement) {
                     return this.getTotalLength();
                 })
                 .transition()
@@ -89,8 +86,8 @@ function TreeChart({ data }) {
             .data(root.descendants())
             .join(enter => enter.append("text").attr("opacity", 0))
             .attr("class", "label")
-            .attr("x", (node:any) => node.y-20)
-            .attr("y", (node:any) => node.x - 8)
+            .attr("x", (node: any) => node.y - 20)
+            .attr("y", (node: any) => node.x - 8)
             .attr("text-anchor", "middle")
             .attr("fill", "white")
             .text(node => node.data.name)
@@ -101,10 +98,13 @@ function TreeChart({ data }) {
     }, [data, dimensions, previouslyRenderedData]);
 
     return (
-        <div ref={wrapperRef} style={{ marginBottom: "2rem",height:"600px"}} >
+        <div
+            ref={wrapperRef}
+            style={{marginBottom: "2rem", height: "600px"}}
+        >
             <svg ref={svgRef}></svg>
         </div>
-);
+    );
 }
 
 export default TreeChart;
