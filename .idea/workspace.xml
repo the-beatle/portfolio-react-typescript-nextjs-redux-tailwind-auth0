@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d53ef7d1-9850-463d-934d-9f91d600b7d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/types/treeTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/api/contact.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slices/contactSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/hooks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/api" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -50,11 +49,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\pages\api" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\hooks" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\components" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\pages" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\app" />
-      <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
