@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from "react"
+import React, {Fragment,useEffect, useState} from "react"
 import {useUser} from '@auth0/nextjs-auth0'
 import type {GetStaticProps, NextPage} from 'next'
 import Head from 'next/head'
@@ -11,6 +11,7 @@ import TreeChart from "../components/TreeChart"
 import ContactForm from "../components/ContactForm"
 import Data from "../types/treeTypes"
 
+import { useDispatch } from "react-redux"
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const res = await fetch(`${process.env.BACKEND_URL}/category`)
@@ -22,6 +23,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 function Page({data}: Data) {
     const {user, error, isLoading} = useUser();
+    const dispatch = useDispatch()
 
     return (
         <div className={""}>
@@ -29,7 +31,6 @@ function Page({data}: Data) {
                 <title>Mario - Portfolio</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <body>
             <div className="flex flex-col items-center gap-3 mx-5 py-10">
                 <Header/>
                 <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
@@ -37,7 +38,6 @@ function Page({data}: Data) {
                     <ContactForm/>
                 </div>
             </div>
-            </body>
         </div>
     )
 }

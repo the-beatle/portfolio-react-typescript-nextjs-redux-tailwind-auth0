@@ -1,22 +1,27 @@
 import React, {useRef, useEffect} from "react";
 import {select, hierarchy, tree, linkHorizontal} from "d3";
 import useResizeObserver from "../hooks/useResizeObserver";
-import { useForm } from "../hooks/useForm";
+import {useForm} from "../hooks/useForm";
+import {useSelector,useDispatch} from "react-redux";
+import { sendMessage } from "../slices/contactSlice";
 
 function ContactForm() {
+    const {data, error, loading} = useSelector((state: any) => state.contact)
+    const dispatch = useDispatch()
 
     const initialState = {
-        name: "",
         email: "",
-        message:""
+        message: ""
     };
 
+
     async function sendMessageCallback() {
-        // send "values" to database
+        console.log(values)
+        dispatch(sendMessage(values))
     }
 
     // getting the event handlers from our custom hook
-    const { onChange, onSubmit, values } = useForm(
+    const {onChange, onSubmit, values} = useForm(
         sendMessageCallback,
         initialState
     );
@@ -34,26 +39,13 @@ function ContactForm() {
                         <div>
                             <label
                                 className={""}
-                                htmlFor={"name"}>
-                                Name
-                            </label>
-                            <input
-                                name='email'
-                                id='name'
-                                type='text'
-                                placeholder='Name'
-                                onChange={onChange}
-                                required
-                            />
-                            <label
-                                className={""}
                                 htmlFor={"email"}>
                                 Email
                             </label>
                             <input
                                 name='email'
                                 id='email'
-                                type='email'
+                                type='text'
                                 placeholder='email'
                                 onChange={onChange}
                                 required
@@ -72,6 +64,9 @@ function ContactForm() {
                                 required
                             />
                             <button type='submit'>Send</button>
+                            <div className={"text-red-200"}>
+                                {data && <div>{JSON.stringify(data)}</div>}
+                            </div>
                         </div>
                     </form>
                 </div>
