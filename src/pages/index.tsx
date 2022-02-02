@@ -8,32 +8,8 @@ import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
 import Header from "../components/Header"
 import TreeChart from "../components/TreeChart"
-
-
-interface Data {
-    data: TreeBranch;
-
-}
-
-interface TreeBranch {
-    readonly id: string
-    readonly name: string
-    children?: Tree
-    readonly selected?: boolean
-}
-
-type Tree = ReadonlyArray<TreeBranch>
-
-interface TreeItemProps {
-    readonly id: string
-    readonly name: string
-    readonly children: ReadonlyArray<JSX.Element>
-}
-
-interface RecursiveTreeProps {
-    readonly listMeta: Tree
-    readonly onSelectCallback: (value: TreeBranch) => void
-}
+import ContactForm from "../components/ContactForm"
+import Data from "../types/treeTypes"
 
 
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -58,6 +34,7 @@ function Page({data}: Data) {
                 <Header/>
                 <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
                     <TreeChart data={{name: "Me", children: data}}/>
+                    <ContactForm/>
                 </div>
             </div>
             </body>
