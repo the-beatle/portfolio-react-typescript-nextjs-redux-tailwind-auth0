@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d53ef7d1-9850-463d-934d-9f91d600b7d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ContactForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useForm.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/treeTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TreeChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TreeChart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +116,7 @@
       <workItem from="1643434799539" duration="264000" />
       <workItem from="1643511879709" duration="1188000" />
       <workItem from="1643661145279" duration="8822000" />
-      <workItem from="1643748730398" duration="8496000" />
+      <workItem from="1643748730398" duration="10605000" />
     </task>
     <servers />
   </component>

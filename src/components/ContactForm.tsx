@@ -4,13 +4,6 @@ import useResizeObserver from "../hooks/useResizeObserver";
 import { useForm } from "../hooks/useForm";
 
 function ContactForm() {
-    const nameRef = useRef<any>(null);
-    const emailRef = useRef<any>(null);
-    const messageRef = useRef<any>(null);
-
-    async function loginUserCallback() {
-        // send "values" to database
-    }
 
     const initialState = {
         name: "",
@@ -18,9 +11,13 @@ function ContactForm() {
         message:""
     };
 
+    async function sendMessageCallback() {
+        // send "values" to database
+    }
+
     // getting the event handlers from our custom hook
     const { onChange, onSubmit, values } = useForm(
-        loginUserCallback,
+        sendMessageCallback,
         initialState
     );
 
@@ -74,7 +71,7 @@ function ContactForm() {
                                 onChange={onChange}
                                 required
                             />
-                            <button type='submit'>Login</button>
+                            <button type='submit'>Send</button>
                         </div>
                     </form>
                 </div>

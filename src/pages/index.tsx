@@ -9,31 +9,8 @@ import styles from '../styles/Home.module.css'
 import Header from "../components/Header"
 import TreeChart from "../components/TreeChart"
 import ContactForm from "../components/ContactForm"
+import Data from "../types/treeTypes"
 
-
-interface Data {
-    data: TreeBranch;
-
-}
-
-interface TreeBranch {
-    readonly id: string
-    readonly name: string
-    children?: Tree
-}
-
-type Tree = ReadonlyArray<TreeBranch>
-
-interface TreeItemProps {
-    readonly id: string
-    readonly name: string
-    readonly children: ReadonlyArray<JSX.Element>
-}
-
-interface RecursiveTreeProps {
-    readonly listMeta: Tree
-    readonly onSelectCallback: (value: TreeBranch) => void
-}
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const res = await fetch(`${process.env.BACKEND_URL}/category`)
