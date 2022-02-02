@@ -8,6 +8,7 @@ import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
 import Header from "../components/Header"
 import TreeChart from "../components/TreeChart"
+import ContactForm from "../components/ContactForm"
 
 
 interface Data {
@@ -19,7 +20,6 @@ interface TreeBranch {
     readonly id: string
     readonly name: string
     children?: Tree
-    readonly selected?: boolean
 }
 
 type Tree = ReadonlyArray<TreeBranch>
@@ -34,7 +34,6 @@ interface RecursiveTreeProps {
     readonly listMeta: Tree
     readonly onSelectCallback: (value: TreeBranch) => void
 }
-
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const res = await fetch(`${process.env.BACKEND_URL}/category`)
@@ -58,6 +57,7 @@ function Page({data}: Data) {
                 <Header/>
                 <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
                     <TreeChart data={{name: "Me", children: data}}/>
+                    <ContactForm/>
                 </div>
             </div>
             </body>
