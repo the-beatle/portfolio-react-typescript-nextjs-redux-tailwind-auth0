@@ -5,7 +5,7 @@ export const useForm = (callback: any, initialState = {}) => {
     const [values, setValues] = useState(initialState);
 
     // onChange
-    const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const onChange = (event: React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
         setValues({...values, [event.target.name]: event.target.value});
     };
 

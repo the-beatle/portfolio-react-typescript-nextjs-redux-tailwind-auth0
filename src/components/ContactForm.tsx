@@ -2,8 +2,8 @@ import React, {useRef, useEffect} from "react";
 import {select, hierarchy, tree, linkHorizontal} from "d3";
 import useResizeObserver from "../hooks/useResizeObserver";
 import {useForm} from "../hooks/useForm";
-import {useSelector,useDispatch} from "react-redux";
-import { sendMessage } from "../slices/contactSlice";
+import {useSelector, useDispatch} from "react-redux";
+import {sendMessage} from "../slices/contactSlice";
 
 function ContactForm() {
     const {data, error, loading} = useSelector((state: any) => state.contact)
@@ -16,7 +16,6 @@ function ContactForm() {
 
 
     async function sendMessageCallback() {
-        console.log(values)
         dispatch(sendMessage(values))
     }
 
@@ -27,22 +26,23 @@ function ContactForm() {
     );
 
     return (
-        <div className={"text-blue text-xl"}>
+        <div className={"text-blue text-xl flex justify-center"}>
             <div className={""}>
-                <div className={""}>
+                <div className={"text-white"}>
                     <div>
                         CONTACT ME!
                     </div>
                 </div>
-                <div className={"text-lg border border-white"}>
-                    <form onSubmit={onSubmit}>
-                        <div>
+                <div className={"w-full max-w-xs "}>
+                    <form onSubmit={onSubmit} className={"rounded px-8 pt-6 pb-8 mb-4 "}>
+                        <div className={"mb-4"}>
                             <label
-                                className={""}
+                                className={"block font-bold mb-2 text-red-400"}
                                 htmlFor={"email"}>
                                 Email
                             </label>
                             <input
+                                className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
                                 name='email'
                                 id='email'
                                 type='text'
@@ -50,23 +50,35 @@ function ContactForm() {
                                 onChange={onChange}
                                 required
                             />
+                        </div>
+                        <div className={"mb-6"}>
                             <label
-                                className={""}
+                                className={"block font-bold mb-2 text-red-400"}
                                 htmlFor={"message"}>
                                 Message
                             </label>
-                            <input
+                            <textarea
+                                className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
                                 name='message'
                                 id='message'
-                                type=''
                                 placeholder='message'
                                 onChange={onChange}
                                 required
                             />
-                            <button type='submit'>Send</button>
-                            <div className={"text-red-200"}>
-                                {data && <div>{JSON.stringify(data)}</div>}
-                            </div>
+                        </div>
+
+                        <button className={"w-full bg-green-400"} type='submit'>Send</button>
+                        <div className={"text-red-200 mt-4"}>
+                            {data && (
+                                <div>
+                                    <div className={"text-blue-500"}>
+                                        {"The message was successfully sent!"}
+                                    </div>
+                                    <div>
+                                        {"Please check out your email"}
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </form>
                 </div>
