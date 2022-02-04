@@ -14,7 +14,6 @@ function ContactForm() {
         message: ""
     };
 
-
     async function sendMessageCallback() {
         dispatch(sendMessage(values))
     }
@@ -39,7 +38,7 @@ function ContactForm() {
                             <label
                                 className={"block font-bold mb-2 text-red-400"}
                                 htmlFor={"email"}>
-                                Email
+                                Your Email
                             </label>
                             <input
                                 className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
@@ -61,7 +60,7 @@ function ContactForm() {
                                 className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
                                 name='message'
                                 id='message'
-                                placeholder='message'
+                                placeholder='Send me a messagge!'
                                 onChange={onChange}
                                 required
                             />
@@ -69,6 +68,7 @@ function ContactForm() {
 
                         <button className={"w-full bg-green-400"} type='submit'>Send</button>
                         <div className={"text-red-200 mt-4"}>
+                            {loading&&(<div>Sending ...</div>)}
                             {data && (
                                 <div>
                                     <div className={"text-blue-500"}>
