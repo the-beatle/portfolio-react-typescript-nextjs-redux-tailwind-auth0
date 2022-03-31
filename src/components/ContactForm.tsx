@@ -65,7 +65,6 @@ function ContactForm() {
                                 required
                             />
                         </div>
-
                         <button className={"w-full bg-green-400"} type='submit'>Send</button>
                         <div className={"text-red-200 mt-4"}>
                             {loading&&(<div>Sending ...</div>)}

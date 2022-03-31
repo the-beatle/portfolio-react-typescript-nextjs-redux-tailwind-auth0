@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarksViewState">
+    <option name="rewriteBookmarkType" value="true" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d53ef7d1-9850-463d-934d-9f91d600b7d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/slices/catSaga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slices/catState.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.spec.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/counterAPI.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/counterSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/api/counter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slices/contactSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/slices/contactSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/slices" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -48,11 +64,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\slices" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\pages\api" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\hooks" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\components" />
       <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\pages" />
-      <recent name="C:\Users\Mario\Documents\mario-portfolio-react-typescript-nextjs-redux-tailwind-auth0\src\app" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -124,7 +140,8 @@
       <workItem from="1643511879709" duration="1188000" />
       <workItem from="1643661145279" duration="8822000" />
       <workItem from="1643748730398" duration="10605000" />
-      <workItem from="1643984693280" duration="1147000" />
+      <workItem from="1643984693280" duration="3916000" />
+      <workItem from="1648688493808" duration="9147000" />
     </task>
     <servers />
   </component>
