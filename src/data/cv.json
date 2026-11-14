@@ -1,0 +1,251 @@
+{
+  "profile": {
+    "name": "Mario Cano",
+    "title": "Senior Software Engineer",
+    "location": "Medellín, Colombia",
+    "email": "marcae7@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mario-cano-76364319",
+    "summary": "Senior Software Engineer at EPAM Systems, delivering full-stack work in JavaScript/TypeScript (React, Node.js) and Python (Django) for enterprise clients including Travelers, Epic Games, Nordstrom, and McKesson. Experienced in cloud-native delivery on AWS and Kubernetes, 24/7 on-call operations, and observability. Started in environmental engineering and hydrology data science at SIATA, the Aburrá Valley Early Warning System, building monitoring, forecasting, and early-alarm systems."
+  },
+  "skills": [
+    {"name": "Languages", "items": ["JavaScript", "TypeScript", "Python", "SQL", "Bash", "Fortran"]},
+    {"name": "Frontend", "items": ["React", "Redux Toolkit", "Redux-Saga", "Next.js", "Ag-Grid", "Tailwind CSS", "D3", "HTML", "CSS/SCSS"]},
+    {"name": "Backend", "items": ["Node.js", "Express.js", "NestJS", "Django", "Django REST Framework", "Celery", "Redis", "REST APIs"]},
+    {"name": "Cloud & DevOps", "items": ["AWS", "Kubernetes", "Terraform", "GitHub Actions", "CI/CD"]},
+    {"name": "Data", "items": ["PostgreSQL", "MySQL", "BigQuery", "Airflow", "Pandas", "Matplotlib", "GDAL/GIS"]},
+    {"name": "Observability", "items": ["Dynatrace", "Grafana", "Splunk", "New Relic"]},
+    {"name": "Testing & quality", "items": ["Jest", "Playwright", "Selenium", "SonarQube", "Snyk", "42Crunch"]},
+    {"name": "AI", "items": ["Claude", "Neural networks"]}
+  ],
+  "experiences": [
+    {
+      "slug": "epam-senior-software-engineer",
+      "role": "Senior Software Engineer",
+      "company": "EPAM Systems",
+      "period": "Jan 2023 – Present",
+      "start": "2023-01",
+      "location": "United States (remote)",
+      "summary": "Senior engineer on enterprise client engagements, owning full-stack delivery with Node.js, React, and AWS.",
+      "projects": [
+        {
+          "name": "Travelers",
+          "subtitle": "MuleSoft exit",
+          "period": "2026",
+          "highlights": [
+            "Owned several legacy services and led their migration from MuleSoft to Node.js on AWS Lambda, API Gateway, and Express.js.",
+            "Built custom Claude skills that standardized and accelerated migration workflows across services.",
+            "Added SonarQube, Snyk, and 42Crunch security and quality checks, plus CloudWatch and Dynatrace observability for the migrated services."
+          ]
+        },
+        {
+          "name": "Epic Games",
+          "subtitle": "Accounts & Identity",
+          "period": "2025–2026",
+          "highlights": [
+            "Frontend lead on the launch of Epic Games Authenticator: MFA and authorization flows in Node.js and React for millions of users.",
+            "Defined technical approaches, ran A/B tests on authentication flows, and expanded end-to-end coverage with Playwright and Selenium.",
+            "Handled on-call for high-priority production incidents and improved Grafana monitoring with the Telemetry & Analytics team."
+          ]
+        },
+        {
+          "name": "Nordstrom",
+          "subtitle": "Product Selling Controls",
+          "period": "2023–2025",
+          "highlights": [
+            "Designed and built a NestJS Backend-for-Frontend from scratch, plus React features on Ag-Grid's server-side row model.",
+            "Built large-file upload, transformation, and custom Excel export workflows on Node.js and AWS S3.",
+            "Migrated complex SQL from Teradata to BigQuery and contributed to Airflow export pipelines.",
+            "Shared 24/7 on-call in a 14-person distributed team; Kubernetes, Terraform, Splunk, New Relic."
+          ]
+        }
+      ],
+      "highlights": [],
+      "stack": ["Node.js", "TypeScript", "JavaScript", "React", "Express.js", "NestJS", "AWS Lambda", "AWS API Gateway", "AWS S3", "AWS CloudWatch", "Ag-Grid", "BigQuery", "Airflow", "SQL", "Kubernetes", "Terraform", "Claude", "SonarQube", "Snyk", "42Crunch", "Playwright", "Selenium", "Dynatrace", "Grafana", "Splunk", "New Relic"]
+    },
+    {
+      "slug": "epam-software-engineer",
+      "role": "Software Engineer",
+      "company": "EPAM Systems",
+      "period": "Mar 2022 – Feb 2023",
+      "start": "2022-03",
+      "location": "United States",
+      "projects": [
+        {
+          "name": "McKesson",
+          "subtitle": "McKesson Connect ordering platform on SAP Commerce (Hybris)",
+          "period": "2022–2023",
+          "highlights": [
+            "Helped move the Item Maintenance page from vanilla JavaScript to React, building its initial Redux Toolkit store and sagas.",
+            "Built search and dropdown components to look up products across multiple accounts, and customized editable grid columns.",
+            "Integrated Google Analytics 4 events with Hybris promotions and with the Okta login flow.",
+            "Unit-tested every delivered feature in Jest and raised overall coverage; contributed to effort estimates and supported the BA in client meetings."
+          ]
+        }
+      ],
+      "highlights": [],
+      "stack": ["JavaScript", "React", "Redux Toolkit", "Redux-Saga", "Webpack", "SAP Commerce (Hybris)", "Google Analytics 4", "Google Tag Manager", "Okta", "Jest"]
+    },
+    {
+      "slug": "kapua-senior-full-stack-web-developer",
+      "role": "Senior Full Stack Web Developer",
+      "company": "Kapua",
+      "period": "Aug 2020 – Mar 2022",
+      "start": "2020-08",
+      "location": "United States",
+      "summary": "AI-powered stock market platform: AI models generate trading signals and price forecasts, shown through custom interactive charts.",
+      "highlights": [
+        "Led the frontend team in designing and estimating the company's new AI platform.",
+        "Built custom stock market charts in React and TypeScript, and used Next.js server-side rendering to improve SEO and initial load times.",
+        "Maintained the Django REST API; reduced AI model loading times with Celery parallel processing and added Redis cache-aside caching.",
+        "Integrated Stripe payments and Auth0 authentication; introduced Tailwind CSS to standardize the UI."
+      ],
+      "stack": ["Python", "Django", "Celery", "Redis", "PostgreSQL", "TypeScript", "React", "Redux Toolkit", "Next.js", "Tailwind CSS", "Auth0", "Stripe", "Jest", "REST APIs"]
+    },
+    {
+      "slug": "kapua-full-stack-web-developer",
+      "role": "Full Stack Web Developer",
+      "company": "Kapua",
+      "period": "Jun 2019 – Aug 2020",
+      "start": "2019-06",
+      "location": "United States",
+      "summary": "AI-powered demand planning dashboard: AI models generate demand forecasts, presented in interactive charts for business planning.",
+      "highlights": [
+        "Built and maintained the Django REST Framework API serving forecasts, with Celery parallel processing and Redis caching.",
+        "Helped migrate the frontend from vanilla JavaScript to React with Redux, and cut bundle size and load times through code splitting.",
+        "Contributed to the frontend CI/CD pipeline with GitHub Actions and Azure.",
+        "Integrated Stripe payments and Auth0 authentication."
+      ],
+      "stack": ["Python", "Django REST Framework", "PostgreSQL", "Celery", "Redis", "JavaScript", "React", "Redux", "CSS/SCSS", "Azure Blob Storage", "GitHub Actions", "CI/CD", "Auth0", "Stripe", "REST APIs"]
+    },
+    {
+      "slug": "siata-full-stack-web-developer-2019",
+      "role": "Full Stack Web Developer",
+      "company": "SIATA",
+      "companyFull": "SIATA (Aburrá Valley Early Warning System)",
+      "period": "Jan 2019 – Jun 2019",
+      "start": "2019-01",
+      "location": "Colombia",
+      "summary": "Real-time flood forecasting tools and a hydrology application for SIATA, the Aburrá Valley Early Warning System.",
+      "highlights": [
+        "Created a notification service that alerts the city fire department to heavy rainfall, and a web app to trigger community alarms across the valley.",
+        "Designed and built a React app for collecting in-situ water flow measurements in the field.",
+        "Extended the Django/PostgreSQL data model and REST API to store and serve geometric (GIS) data.",
+        "Created an ETL process moving gauging-station data into the Hydrology team's database.",
+        "Helped define risk levels for critical points in the drainage basin."
+      ],
+      "stack": ["Python", "Django REST Framework", "PostgreSQL", "Pandas", "Matplotlib", "GDAL/GIS", "Basemap", "Bash", "cron", "JavaScript", "React", "Redux", "D3", "REST APIs"]
+    },
+    {
+      "slug": "siata-full-stack-web-developer-2017",
+      "role": "Full Stack Web Developer",
+      "company": "SIATA",
+      "companyFull": "SIATA (Aburrá Valley Early Warning System)",
+      "period": "Jun 2017 – Jan 2019",
+      "start": "2017-06",
+      "location": "Colombia",
+      "summary": "Web development and hydrological data analysis to improve forecasting, visualization, and real-time reporting at SIATA.",
+      "highlights": [
+        "Designed a Django web app centralizing hydraulic data for the hydrology team, and contributed to the initial models for rainfall, water level, and surface velocity data.",
+        "Built a REST API with Django REST Framework and migrated the Django-rendered frontend to React.",
+        "Automated environmental image processing with cron jobs and contributed to automated daily and monthly hydrometeorological reports.",
+        "Created Matplotlib charts for the data analytics team."
+      ],
+      "stack": ["Python", "Django", "Django REST Framework", "MySQL", "Pandas", "Matplotlib", "GDAL/GIS", "Bash", "cron", "JavaScript", "React", "REST APIs"]
+    },
+    {
+      "slug": "eafit-consultant-analyst-2016-2017",
+      "role": "Consultant Analyst",
+      "company": "Universidad EAFIT",
+      "companyFull": "Universidad EAFIT (at SIATA)",
+      "period": "Aug 2016 – Jun 2017",
+      "start": "2016-08",
+      "location": "Colombia",
+      "summary": "As part of the hydrology team at SIATA, the Aburrá Valley Early Warning System (Medellín, Colombia), through Universidad EAFIT.",
+      "highlights": [
+        "Set up the monitoring system for the valley's streams and the Medellín River, including telemetry for water level and surface velocity sensors.",
+        "Determined station risk levels and built the system that sent early alarms to communities based on each station's risk level during rainfall events.",
+        "Built real-time charts and automated reports of rainfall events.",
+        "Researched extreme events using hydrological models and statistical water level forecasts, modeling hydrological events with Bayesian networks and Kalman filters."
+      ],
+      "stack": ["Python", "Hydrology", "Telemetry", "Bayesian networks", "Kalman filters"]
+    },
+    {
+      "slug": "eafit-consultant-analyst-2016",
+      "role": "Consultant Analyst",
+      "company": "Universidad EAFIT",
+      "companyFull": "Universidad EAFIT (at SIATA)",
+      "period": "Mar 2016 – Jun 2016",
+      "start": "2016-03",
+      "location": "Colombia",
+      "summary": "On-call operations at SIATA, the Aburrá Valley Early Warning System (Medellín, Colombia), through Universidad EAFIT.",
+      "highlights": [
+        "Provided 24/7 on-call coverage from the command center, reporting in real time on extreme rainfall events and on infrastructure incidents such as database failures.",
+        "Triaged incidents and maintained the runbooks used to respond to them.",
+        "Sent reports, alerts, and alarm notices to the city entities involved, such as the fire department and local communities.",
+        "Kept communication with the stations of the monitoring network and supported the hydrology team's activities.",
+        "Worked extensively with Bash, Python, SQL, and monitoring tools during on-call operations."
+      ],
+      "stack": ["Bash", "Python", "SQL", "24/7 on-call", "Runbooks"]
+    },
+    {
+      "slug": "unal-data-science-researcher",
+      "role": "Data Science Researcher",
+      "company": "Universidad Nacional de Colombia",
+      "period": "Feb 2016 – May 2016",
+      "start": "2016-02",
+      "location": "Colombia",
+      "summary": "Research at CALAIRE (Air Quality Laboratory, Facultad de Minas) under Prof. José Fernando Jiménez, on forecasting critical air pollution episodes in the Aburrá Valley (Medellín, Colombia).",
+      "highlights": [
+        "Developed a feedforward neural network in Python to forecast next-day PM2.5 concentrations and flag critical episodes (daily average above 35 µg/m³).",
+        "Derived mixing layer height from vertical temperature and humidity profiles measured by the microwave radiometer (Radiometrics MP-3000A) operated by SIATA, the valley's early warning system, improving knowledge of the atmospheric boundary layer (ABL) and using it as a model input.",
+        "Combined boundary layer data with surface meteorology (temperature, humidity, solar radiation, precipitation, wind) and previous-day PM2.5 from the valley's air quality network.",
+        "Contributed to the research line published in DYNA (2019): \"Artificial neural network applied for the forecast of critical PM2.5 events in the Aburra Valley\"."
+      ],
+      "stack": ["Python", "Neural networks", "Air quality"]
+    },
+    {
+      "slug": "udea-data-science-researcher",
+      "role": "Data Science Researcher",
+      "company": "Universidad de Antioquia",
+      "period": "Oct 2014 – Feb 2016",
+      "start": "2014-10",
+      "location": "Colombia",
+      "summary": "Hydrological and hydraulic analysis supporting the water budget study of the Aburrá Valley (Medellín, Antioquia, Colombia).",
+      "highlights": [
+        "Produced spatial rainfall maps by downscaling large-scale NASA satellite precipitation data (IMERG) and merging it with in situ rain gauge records, combining the spatial coverage of satellite estimates with the accuracy of ground measurements.",
+        "Developed stage–discharge rating curves for water level stations, converting level readings into streamflow estimates.",
+        "Performed environmental data analysis, processing hydrometeorological datasets with Python (Cython, multiprocessing) and Fortran to support the hydrological and hydraulic studies of the basin."
+      ],
+      "stack": ["Python", "Cython", "Fortran", "Hydrology"]
+    },
+    {
+      "slug": "unal-laboratory-attendant",
+      "role": "Laboratory Attendant",
+      "company": "Universidad Nacional de Colombia",
+      "period": "Oct 2014 – Feb 2016",
+      "start": "2014-10",
+      "location": "Colombia (part-time)",
+      "highlights": [
+        "Fluid Mechanics student assistant in the Hydraulics laboratory, supporting academic activities and laboratory practice."
+      ],
+      "stack": ["Fluid mechanics", "Hydraulics"]
+    }
+  ],
+  "education": [
+    {"degree": "Environmental Engineering (Ingeniero Ambiental)", "institution": "Universidad Nacional de Colombia", "period": "Jan 2012 – Aug 2017"}
+  ],
+  "certifications": [
+    {"name": "Claude Certified Architect – Foundations", "issuer": "Anthropic", "date": "Jun 2026"},
+    {"name": "Model Context Protocol: Advanced Topics", "issuer": "Anthropic", "date": "May 2026"},
+    {"name": "Introduction to Model Context Protocol", "issuer": "Anthropic", "date": "May 2026"},
+    {"name": "Introduction to Agent Skills", "issuer": "Anthropic", "date": "May 2026"},
+    {"name": "Building with the Claude API", "issuer": "Anthropic", "date": "May 2026"},
+    {"name": "Claude Code in Action", "issuer": "Anthropic", "date": "May 2026"}
+  ],
+  "learning": {
+    "total": 62,
+    "summary": "62 completed items on LinkedIn Learning: one learning path and 61 courses.",
+    "path": "Become a JavaScript Developer (31 hours)",
+    "topics": ["JavaScript and TypeScript", "React and frontend", "Node.js and backend", "DevOps and cloud", "Linux, networking, and tools", "Architecture, process, and analytics"]
+  }
+}
