@@ -1,15 +1,7 @@
-import type {AppState, AppThunk} from '../app/store'
-
-export async function fetchContact(email = "marcae7@gmail.com", message = "hello world"): Promise<{ data: any }> {
-    const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({email, message}),
-    })
-    const result = await response.json()
-    return result
+// UI only: simulates sending the message, no network call.
+export async function fetchContact(email: string, message: string): Promise<{ email: string, message: string }> {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    return {email, message}
 }
 
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'

@@ -1,30 +1,19 @@
-import React, {Fragment,useEffect, useState} from "react"
-import {useUser} from '@auth0/nextjs-auth0'
-import type {GetStaticProps, NextPage} from 'next'
+import React from "react"
+import type {GetStaticProps} from 'next'
 import Head from 'next/head'
-import Router from 'next/router'
 
-import Counter from '../features/counter/Counter'
-import styles from '../styles/Home.module.css'
 import Header from "../components/Header"
 import TreeChart from "../components/TreeChart"
 import ContactForm from "../components/ContactForm"
 import Data, {Tree} from "../types/treeTypes"
 import categories from "../data/categories.json"
 
-import { useDispatch } from "react-redux"
-
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
     const data: Tree = categories
-    // Pass data to the page via props
     return {props: {data}}
 }
 
-
 function Page({data}: Data) {
-    const {user, error, isLoading} = useUser();
-    const dispatch = useDispatch()
-
     return (
         <div className={""}>
             <Head>
