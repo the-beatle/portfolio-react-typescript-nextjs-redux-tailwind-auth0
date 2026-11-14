@@ -4,7 +4,6 @@ import Head from 'next/head'
 
 import Header from "../components/Header"
 import TreeChart from "../components/TreeChart"
-import ContactForm from "../components/ContactForm"
 import Data, {Tree} from "../types/treeTypes"
 import categories from "../data/categories.json"
 
@@ -24,7 +23,6 @@ function Page({data}: Data) {
                 <Header/>
                 <div className={"w-screen font-custom1 px-10 sm:px-40 mt-10 text-xs"}>
                     <TreeChart data={{name: "Me", children: data}}/>
-                    <ContactForm/>
                 </div>
             </div>
         </div>
