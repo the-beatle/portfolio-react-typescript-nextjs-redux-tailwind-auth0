@@ -9,13 +9,13 @@ import styles from '../styles/Home.module.css'
 import Header from "../components/Header"
 import TreeChart from "../components/TreeChart"
 import ContactForm from "../components/ContactForm"
-import Data from "../types/treeTypes"
+import Data, {Tree} from "../types/treeTypes"
+import categories from "../data/categories.json"
 
 import { useDispatch } from "react-redux"
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const res = await fetch(`${process.env.BACKEND_URL}/category`)
-    const data = await res.json()
+    const data: Tree = categories
     // Pass data to the page via props
     return {props: {data}}
 }

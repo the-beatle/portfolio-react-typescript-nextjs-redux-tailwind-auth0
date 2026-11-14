@@ -6,7 +6,7 @@ interface Data {
 export default Data;
 
 export interface TreeBranch {
-    readonly id: string
+    readonly id: string | number
     readonly name: string
     children?: Tree
 }
@@ -14,7 +14,7 @@ export interface TreeBranch {
 export type Tree = ReadonlyArray<TreeBranch>
 
 interface TreeItemProps {
-    readonly id: string
+    readonly id: string | number
     readonly name: string
     readonly children: ReadonlyArray<JSX.Element>
 }
