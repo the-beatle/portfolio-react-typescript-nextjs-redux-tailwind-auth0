@@ -9,7 +9,7 @@ export function getExperience(slug: string): Experience | undefined {
     return experiences.find((e) => e.slug === slug)
 }
 
-// "AWS" matches "AWS Lambda", "Django" matches "Django" but not "Django REST Framework".
+// A skill matches its exact tag or a more specific one: "AWS" matches "AWS Lambda", "Django" matches "Django REST Framework".
 export function usesSkill(experience: Experience, skill: string): boolean {
     return experience.stack.some((tag) => tag === skill || tag.startsWith(`${skill} `))
 }
